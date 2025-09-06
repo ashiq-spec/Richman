@@ -1,0 +1,118 @@
+:root{
+  --bg:#0b0b0c; --card:#121215; --text:#f7f8fc; --muted:#aab0be;
+  --gold:#d4af37; --line:rgba(255,255,255,.08); --link:#b8c4ff;
+}
+
+/* --- Base & Background (continuous) --- */
+*{box-sizing:border-box}
+html,body{height:100%; background:#0b0b0c;}
+body{
+  margin:0;
+  /* Keep gradient fixed so it doesn't "cut" on scroll; solid color backs it up */
+  background: radial-gradient(1200px 600px at 10% 0%, #1a1a1e, #0b0b0c) fixed;
+  background-color:#0b0b0c;
+  color:var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.shell{max-width:1100px;margin:0 auto;padding:0 20px}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* --- Luxury Type Scale --- */
+h1,h2,h3{font-family: Georgia, "Times New Roman", Times, serif; letter-spacing:.2px}
+h1{font-size:clamp(34px, 5.6vw, 64px); font-weight:600; margin:0 0 10px}
+h2{font-size:clamp(24px, 3.2vw, 36px); font-weight:600; margin:0}
+h3{font-size:clamp(18px, 2vw, 22px); font-weight:600; margin:0 0 6px}
+.accent{color:var(--gold)}
+
+/* --- Header --- */
+.site-header{
+  position:sticky; top:0; z-index:20;
+  background:rgba(11,11,12,.55);
+  backdrop-filter:saturate(1.1) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.site-header .shell{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.logo{width:36px;height:36px;border-radius:8px;background:#151519;display:grid;place-items:center;color:var(--gold);font-family:serif}
+.name{letter-spacing:.3px}
+.top-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn,.ghost{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:10px 14px;border-radius:12px;border:1px solid var(--line);
+  background:linear-gradient(180deg,#1a1a1f,#101014);color:#fff;font-weight:600;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);transition:.18s
+}
+.btn:hover,.ghost:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.32)}
+.btn{border-color:rgba(212,175,55,.55)}
+.btn.outline{background:transparent;border-color:rgba(212,175,55,.45)}
+.btn.small{padding:8px 12px;border-radius:10px;font-size:14px}
+.top-actions .ig{border-color:rgba(255,255,255,.18)}
+
+/* --- Hero --- */
+.hero{position:relative;min-height:68vh;display:grid;align-items:center}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(1.1) brightness(.7)}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.58))}
+.hero-content{position:relative;padding:60px 20px}
+.intro{color:var(--muted);max-width:720px;margin:8px 0 16px;font-size:18px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.btn.xl{padding:14px 18px;border-radius:14px}
+.pill{display:inline-block;border:1px solid rgba(212,175,55,.45);color:var(--gold);padding:6px 10px;border-radius:999px;font-size:12px;background:rgba(212,175,55,.1)}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+
+/* --- Features --- */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:40px auto}
+.feature{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));border:1px solid var(--line);border-radius:18px;padding:20px}
+
+/* --- Gallery --- */
+.gallery{margin:42px auto}
+.gallery .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.gallery img{width:100%;height:240px;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+
+/* --- Reviews --- */
+.reviews{margin:42px auto}
+.reviews-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.review{margin:0;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));border:1px solid var(--line);border-radius:18px;padding:18px}
+.review p{margin:0 0 10px;font-size:17px;line-height:1.5}
+.review footer{color:var(--muted);font-size:14px}
+
+/* --- Info cards --- */
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:36px auto}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));border:1px solid var(--line);border-radius:18px;padding:18px}
+.hours{list-style:none;padding:0;margin:0}
+.hours li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:8px 0}
+.link{color:#cfd6ff}
+
+/* --- Sticky action bar (mobile) --- */
+.cta-sticky{
+  position:fixed;bottom:12px;left:50%;transform:translateX(-50%);
+  display:none;gap:10px;background:rgba(13,13,16,.8);backdrop-filter:blur(8px);
+  padding:10px;border:1px solid var(--line);border-radius:999px;z-index:30
+}
+.cta-sticky a{color:#fff;padding:8px 12px;border:1px solid var(--line);border-radius:999px}
+
+/* --- Footer (transparent to avoid “cut”) --- */
+.site-footer{
+  background:transparent;            /* key: no solid block at bottom */
+  border-top:1px solid var(--line);
+  margin-top:44px
+}
+.site-footer .shell{height:72px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+/* --- Responsive --- */
+@media (max-width:1024px){
+  .features{grid-template-columns:1fr 1fr}
+  .gallery .grid{grid-template-columns:1fr 1r}
+  .review-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .top-actions{display:none}
+  .cta-sticky{display:flex}
+  .gallery img{height:200px}
+  .review-grid{grid-template-columns:1fr}
+}
