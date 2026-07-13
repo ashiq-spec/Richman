@@ -23,13 +23,13 @@ export default function HomePage() {
     <>
       <Hero />
       <Stats />
+      <Visit />
       <Services />
       <Craft />
       <Why />
       <Gallery />
       <Testimonials />
       <Faq />
-      <Visit />
       <CtaBand />
       <JsonLd data={faqSchema(HOME_FAQS)} />
     </>
