@@ -33,8 +33,8 @@ export function Craft() {
           <div data-reveal className="relative">
             <div className="overflow-hidden rounded-2xl">
               <Image
-                src="/images/gallery_4.jpg"
-                alt="Master tailor fitting a custom suit at the Richman Suits Gold atelier in Guindy, Chennai"
+                src="/images/craft-atelier.jpg"
+                alt="Bespoke suit jacket under construction beside a vintage sewing machine and fabric swatches"
                 width={880}
                 height={1100}
                 className="h-auto w-full object-cover"

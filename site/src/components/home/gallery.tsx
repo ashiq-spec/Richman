@@ -10,39 +10,39 @@ import { SITE } from "@/lib/site";
 
 const ITEMS = [
   {
-    src: "/images/gallery_1.jpg",
-    alt: "Bespoke custom-tailored suit crafted at Richman Suits Gold, Chennai",
+    src: "/images/gal-custom.jpg",
+    alt: "Man buttoning a custom-tailored charcoal suit in moody studio light",
     label: "Custom Suits",
     className: "row-span-2",
   },
   {
-    src: "/images/gallery_2.jpg",
-    alt: "Groom's wedding tuxedo tailored in Guindy, Chennai",
+    src: "/images/gal-tuxedo.jpg",
+    alt: "Black peak-lapel tuxedo look styled for an evening reception",
     label: "Wedding Tuxedos",
     className: "",
   },
   {
-    src: "/images/gallery_3.jpg",
-    alt: "Premium imported suiting fabrics at the Richman Suits fabric library",
+    src: "/images/gal-fabric.jpg",
+    alt: "Folded premium suiting fabrics in navy check and grey twill",
     label: "Premium Fabrics",
     className: "",
   },
   {
-    src: "/images/gallery_4.jpg",
-    alt: "Private fitting session for a bespoke suit in Chennai",
+    src: "/images/gal-fitting.jpg",
+    alt: "Suit and tie pinned on a tailor's mannequin during fitting",
     label: "Fitting Sessions",
     className: "sm:col-span-2",
   },
   {
-    src: "/images/gallery_5.jpg",
-    alt: "Handcrafted Aari embroidery detail on a wedding sherwani",
-    label: "Aari Embroidery",
+    src: "/images/gal-sherwani.jpg",
+    alt: "Ivory embroidered wedding sherwani with pearl haar on a hanger",
+    label: "Sherwanis & Embroidery",
     className: "",
   },
   {
-    src: "/images/gallery_6.jpg",
-    alt: "Premium rental blazers and event wear collection in Chennai",
-    label: "Rental Blazers",
+    src: "/images/gal-groomsmen.jpg",
+    alt: "Groom and groomsman in coordinated formal wear outdoors",
+    label: "Groomsmen & Rentals",
     className: "",
   },
 ];

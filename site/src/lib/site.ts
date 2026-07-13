@@ -64,6 +64,12 @@ export const SITE = {
     fitSatisfaction: "100%",
   },
 
+  /** Real numbers from the owner's Google Business Profile (all showrooms combined, July 2026). */
+  rating: {
+    value: "4.7",
+    count: 349,
+  },
+
   serviceAreas: [
     "Guindy",
     "Alandur",

@@ -59,12 +59,12 @@ export function Hero() {
       {/* Photography */}
       <div className="hero-media absolute inset-0" aria-hidden>
         <Image
-          src="/images/hero.jpg"
+          src="/images/hero-groom.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[70%_center] sm:object-center"
+          className="object-cover object-[68%_22%]"
         />
       </div>
       {/* Cinematic grading */}
@@ -103,8 +103,8 @@ export function Hero() {
             className="mt-6 max-w-xl text-base leading-relaxed text-silk/85 md:text-lg"
           >
             Custom wedding suits, tuxedos and sherwanis, cut in our Guindy
-            atelier — {SITE.stats.suitsDelivered.toLowerCase()} suits delivered
-            across Chennai&apos;s finest weddings.
+            atelier — {SITE.stats.suitsDelivered}&nbsp;suits delivered across
+            Chennai&apos;s finest weddings.
           </p>
 
           <div
@@ -143,14 +143,11 @@ export function Hero() {
               href={SITE.links.maps}
               target="_blank"
               rel="noopener"
-              className="flex items-center gap-2 text-xs font-medium tracking-wide text-silk/90 transition-colors hover:text-champagne"
+              className="flex items-center gap-1.5 text-xs font-medium tracking-wide text-silk/90 transition-colors hover:text-champagne"
             >
-              <span className="flex text-gold" aria-hidden>
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="size-3.5 fill-current" />
-                ))}
-              </span>
-              Google Reviews
+              <Star className="size-3.5 fill-current text-gold" aria-hidden />
+              <strong className="font-semibold">{SITE.rating.value}</strong>·{" "}
+              {SITE.rating.count} Google Reviews
             </a>
             {TRUST.map((item) => (
               <span

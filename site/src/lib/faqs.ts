@@ -49,3 +49,38 @@ export const HOME_FAQS: Faq[] = [
       "Yes. Wedding packages cover the groom plus groomsmen with coordinated fabrics and colours, group fittings and a single delivery timeline — 6-suit and larger wedding parties are routine for us.",
   },
 ];
+
+export const EXTRA_FAQS: Faq[] = [
+  {
+    question: "How do I book an appointment at Richman Suits Gold?",
+    answer:
+      "Call +91 99449 30106, message us on WhatsApp, or simply walk in. The showroom is in Guindy, Chennai — open Monday–Saturday 10 AM–9 PM and Sunday 11 AM–8 PM.",
+  },
+  {
+    question: "How many fittings does a custom suit take?",
+    answer:
+      "Typically 2–3 fittings. Your measurements stay on file, so repeat orders usually need just one confirmation fitting.",
+  },
+  {
+    question: "What if the suit doesn't fit perfectly after delivery?",
+    answer:
+      "We alter it free of charge until it does — that's the Richman perfect-fit guarantee, no questions asked.",
+  },
+  {
+    question: "Do you make sherwanis and embroidered wedding wear?",
+    answer:
+      "Yes — sherwanis, Indo-western looks and handcrafted Aari and zardosi embroidery are a Richman speciality alongside suits and tuxedos.",
+  },
+  {
+    question: "Can you handle urgent orders before a wedding?",
+    answer:
+      "Yes. Standard delivery is 7–10 days, and express 3-day tailoring is available for urgent dates — call first so we can confirm the timeline for your requirement.",
+  },
+  {
+    question: "Where exactly is the showroom?",
+    answer:
+      "Richman Suits Gold is in Guindy, Chennai 600032 — minutes from Guindy Metro and easily reached from Velachery, Adyar, T. Nagar and the airport side of the city. Use the Google Maps link on our contact page for directions.",
+  },
+];
+
+export const ALL_FAQS: Faq[] = [...HOME_FAQS, ...EXTRA_FAQS];

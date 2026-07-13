@@ -101,7 +101,8 @@ export function Testimonials() {
           >
             <Stars />
             <p className="mt-4 font-serif text-xl text-silk">
-              Hundreds more grooms have told their story on Google.
+              Rated {SITE.rating.value}★ by {SITE.rating.count} customers on
+              Google.
             </p>
             <Button asChild variant="outline" size="md" className="mt-6">
               <a href={SITE.links.maps} target="_blank" rel="noopener">

@@ -6,9 +6,9 @@ import type { Faq } from "@/lib/faqs";
  * schema.org structured data. Geo coordinates come from the verified
  * Google Business Profile listing for Richman Suits Gold.
  *
- * Deliberately NO AggregateRating: Google treats self-served review
- * markup as spam unless the numbers mirror a real, verifiable source.
- * Add it only with the true rating/review count from the GBP dashboard.
+ * AggregateRating uses the REAL numbers the owner read from the GBP
+ * dashboard (4.7 / 349 across showrooms, July 2026) and matches what
+ * the pages visibly display — never inflate these.
  */
 
 export function localBusinessSchema() {
@@ -23,8 +23,11 @@ export function localBusinessSchema() {
     telephone: SITE.phone.e164,
     priceRange: "₹₹₹",
     currenciesAccepted: "INR",
-    image: `${SITE.url}/images/og-image.jpg`,
-    logo: `${SITE.url}/favicon.svg`,
+    image: [
+      `${SITE.url}/images/storefront.jpg`,
+      `${SITE.url}/images/og-image.jpg`,
+    ],
+    logo: `${SITE.url}/images/logo.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.address.street,
@@ -39,6 +42,13 @@ export function localBusinessSchema() {
       longitude: SITE.geo.lng,
     },
     hasMap: SITE.links.maps,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: SITE.rating.value,
+      reviewCount: SITE.rating.count,
+      bestRating: "5",
+      worstRating: "1",
+    },
     openingHoursSpecification: SITE.hoursSchema.map((spec) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: spec.dayOfWeek,

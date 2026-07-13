@@ -1,0 +1,61 @@
+# Builds the Next.js site in /site and publishes the static export
+# to GitHub Pages. Runs on pushes to main only — the luxury-rebuild
+# branch never deploys, so work-in-progress can't reach richmansuits.com.
+#
+# NOTE: takes effect only after the repo's Pages settings are switched
+# from "Deploy from a branch" to "GitHub Actions" (done at launch time).
+
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: Build static export
+        working-directory: site
+        run: npm run build
+
+      - name: Add CNAME for custom domain
+        run: cp CNAME site/out/CNAME
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

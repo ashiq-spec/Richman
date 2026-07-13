@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Clock, MapPin, Navigation, Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -111,18 +112,26 @@ export function Visit() {
             </div>
           </div>
 
-          <div
-            data-reveal
-            className="overflow-hidden rounded-2xl border border-gold/15 lg:col-span-3"
-          >
-            <iframe
-              src={SITE.links.mapsEmbed}
-              title="Richman Suits Gold on Google Maps — Guindy, Chennai"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-              className="h-[320px] w-full border-0 grayscale-[25%] sm:h-full sm:min-h-[460px]"
-            />
+          <div data-reveal className="flex flex-col gap-6 lg:col-span-3">
+            <div className="relative h-56 overflow-hidden rounded-2xl border border-gold/15 sm:h-80">
+              <Image
+                src="/images/storefront.jpg"
+                alt="Richman Suits Gold storefront glowing at dusk in Guindy, Chennai"
+                fill
+                sizes="(min-width: 1024px) 56vw, 92vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="grow overflow-hidden rounded-2xl border border-gold/15">
+              <iframe
+                src={SITE.links.mapsEmbed}
+                title="Richman Suits Gold on Google Maps — Guindy, Chennai"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-[280px] w-full border-0 grayscale-[25%] lg:h-full lg:min-h-[240px]"
+              />
+            </div>
           </div>
         </Reveal>
       </div>

@@ -21,19 +21,20 @@ export function Stats() {
       const mm = gsap.matchMedia();
       mm.add("(prefers-reduced-motion: no-preference)", () => {
         el.querySelectorAll<HTMLElement>("[data-count]").forEach((num) => {
+          // Server HTML already contains the final number for crawlers/no-JS;
+          // we animate a plain counter object so formatting never corrupts it.
           const target = Number(num.dataset.count);
-          gsap.from(num, {
-            textContent: 0,
+          const counter = { value: 0 };
+          gsap.to(counter, {
+            value: target,
             duration: 2,
             ease: "power2.out",
-            snap: { textContent: 1 },
+            snap: { value: 1 },
             onUpdate() {
-              num.textContent = Number(num.textContent).toLocaleString("en-IN");
+              num.textContent = counter.value.toLocaleString("en-IN");
             },
             scrollTrigger: { trigger: el, start: "top 85%", once: true },
           });
-          // Server HTML already contains the final number for crawlers/no-JS.
-          void target;
         });
       });
     },
