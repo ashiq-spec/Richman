@@ -90,10 +90,10 @@ export const SERVICES: Service[] = [
     short:
       "Look a million without spending it — premium rentals, dry-cleaned and press-ready in every size.",
     features: [
-      "Premium tuxedos, suits & blazers",
+      "Blazer rentals from ₹899",
+      "Groom's wedding blazers from ₹1,099",
       "All sizes, fitted before you leave",
       "Flexible 1–7 day rental periods",
-      "Ideal for receptions & events",
     ],
     waText: "Hi Richman Suits! I'd like to enquire about suit rentals.",
   },
@@ -133,7 +133,7 @@ export const SERVICES: Service[] = [
       "For engagements, parties and shoots — designer blazers that turn an outfit into an entrance.",
     features: [
       "Designer & festive blazers",
-      "Buy tailored or rent premium",
+      "Rent from ₹899 (groom looks ₹1,099)",
       "Velvet, jacquard & classic wool",
       "Styled with the right trousers",
     ],

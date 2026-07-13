@@ -95,7 +95,7 @@ export const POSTS: Post[] = [
       {
         heading: "Typical Chennai ranges",
         paragraphs: [
-          "As broad market guidance: ready-made wedding suits commonly run a few thousand to the mid-teens; quality made-to-measure work in good Indian fabrics typically starts in the mid-teens and climbs with fabric choice; premium imported-fabric custom suits and heavily embroidered wedding wear go well beyond. Rentals flip the equation — a premium tuxedo or blazer for an evening typically costs a fraction of buying, which is why many grooms buy the wedding look and rent for pre-events.",
+          "As broad market guidance: ready-made wedding suits commonly run a few thousand to the mid-teens; quality made-to-measure work in good Indian fabrics typically starts in the mid-teens and climbs with fabric choice; premium imported-fabric custom suits and heavily embroidered wedding wear go well beyond. Rentals flip the equation — at Richman Suits Gold, blazer rentals start at ₹899 for guests and groomsmen, and at ₹1,099 for the groom's wedding blazer — which is why many grooms buy the wedding look and rent for pre-events.",
           "Any serious tailor should quote you a firm number upfront after you've chosen fabric and details — at Richman Suits Gold the quote you approve is the amount you pay. No fitting-room surprises.",
         ],
       },
@@ -129,7 +129,7 @@ export const POSTS: Post[] = [
       {
         heading: "Rent when…",
         paragraphs: [
-          "The dress code is rare for you (black-tie tuxedo for a single gala), the event is one evening (a friend's reception, an engagement shoot), or you're outfitting groomsmen who'll never wear matching suits again. A premium rental — properly fitted, dry-cleaned, press-ready — looks identical in photographs to a purchased suit, at a fraction of the cost. Good rental programs fit the garment on you and make quick adjustments before you leave; that's what separates 'rented' from 'obviously rented'.",
+          "The dress code is rare for you (black-tie tuxedo for a single gala), the event is one evening (a friend's reception, an engagement shoot), or you're outfitting groomsmen who'll never wear matching suits again. A premium rental — properly fitted, dry-cleaned, press-ready — looks identical in photographs to a purchased suit, at a fraction of the cost: at Richman Suits Gold, blazer rentals start at ₹899, and the groom's wedding blazer at ₹1,099. Good rental programs fit the garment on you and make quick adjustments before you leave; that's what separates 'rented' from 'obviously rented'.",
         ],
       },
       {

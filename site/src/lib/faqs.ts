@@ -4,6 +4,7 @@
  * suits in Chennai. Rendered on the page AND emitted as FAQPage schema,
  * so the visible answers and the structured data never drift apart.
  */
+import { SITE } from "@/lib/site";
 
 export type Faq = { question: string; answer: string };
 
@@ -20,8 +21,7 @@ export const HOME_FAQS: Faq[] = [
   },
   {
     question: "Do you offer wedding suit and tuxedo rentals in Chennai?",
-    answer:
-      "Yes. We maintain a premium rental collection of tuxedos, blazers and suits in all sizes, dry-cleaned and press-ready, with flexible 1–7 day rental periods. It's a popular choice for receptions, engagements and groomsmen.",
+    answer: `Yes. We maintain a premium rental collection of tuxedos, blazers and suits in all sizes, dry-cleaned and press-ready, with flexible 1–7 day rental periods. Rentals start at ${SITE.pricing.guestBlazerRentalFrom} for groomsmen, wedding guests and corporate events, and at ${SITE.pricing.groomBlazerRentalFrom} for the groom's wedding blazer.`,
   },
   {
     question: "How early should I order my wedding suit?",

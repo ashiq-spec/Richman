@@ -1,4 +1,5 @@
 import type { Faq } from "@/lib/faqs";
+import { SITE } from "@/lib/site";
 
 /**
  * Full content for each service page. Every page gets unique copy,
@@ -112,14 +113,13 @@ export const SERVICE_PAGES: ServicePageContent[] = [
   {
     slug: "suit-rentals",
     path: "/suit-rentals/",
-    metaTitle: "Suit & Tuxedo Rental in Chennai — Premium Rentals in Guindy",
+    metaTitle: "Suit & Tuxedo Rental in Chennai — Blazers from ₹899",
     metaDescription:
-      "Premium suit, tuxedo & blazer rentals in Chennai. Dry-cleaned, press-ready, fitted before you leave — flexible 1–7 day rentals at Richman Suits Gold, Guindy.",
+      "Premium suit, tuxedo & blazer rentals in Chennai from ₹899 (groom's wedding blazers from ₹1,099). Dry-cleaned, fitted before you leave — Richman Suits Gold, Guindy.",
     eyebrow: "Suit Rentals · Chennai",
     h1: "Look a Million.",
     h1Accent: "Without Spending It.",
-    intro:
-      "For a reception, an engagement, a shoot or a single unforgettable evening — our rental collection carries the same standard as our tailoring floor. Every piece is dry-cleaned, press-ready and fitted on you before it leaves the store.",
+    intro: `For a reception, an engagement, a shoot or a single unforgettable evening — our rental collection carries the same standard as our tailoring floor. Rentals start at ${SITE.pricing.guestBlazerRentalFrom} (groom's wedding blazers from ${SITE.pricing.groomBlazerRentalFrom}), every piece dry-cleaned, press-ready and fitted on you before it leaves the store.`,
     image: {
       src: "/images/gal-groomsmen.jpg",
       alt: "Groom and groomsman in coordinated premium formal wear",
@@ -148,7 +148,7 @@ export const SERVICE_PAGES: ServicePageContent[] = [
       accent: "for every entrance",
       body: [
         "Engagements, sangeets, birthdays, product launches — sometimes the occasion needs a blazer, not a full suit. Our blazer wall runs from quiet luxury wool to velvet and jacquard statements.",
-        "Rent for the evening or have one tailored to keep — either way you're styled with the right trousers, shirt and pocket square before you go.",
+        `Blazer rentals start at ${SITE.pricing.guestBlazerRentalFrom} for guests, groomsmen and corporate evenings, and at ${SITE.pricing.groomBlazerRentalFrom} for the groom's own wedding blazer. Rent for the evening or have one tailored to keep — either way you're styled with the right trousers, shirt and pocket square before you go.`,
       ],
     },
     steps: [
@@ -168,8 +168,7 @@ export const SERVICE_PAGES: ServicePageContent[] = [
     faqs: [
       {
         question: "How much does it cost to rent a suit in Chennai?",
-        answer:
-          "Rental pricing at Richman Suits Gold depends on the piece and duration, quoted upfront with no hidden charges. Call +91 99449 30106 with your date for an instant quote.",
+        answer: `At Richman Suits Gold, blazer rentals start at ${SITE.pricing.guestBlazerRentalFrom} for groomsmen, wedding guests and corporate events, and at ${SITE.pricing.groomBlazerRentalFrom} for the groom's wedding blazer. Premium tuxedos and full suits are quoted by piece and duration — upfront, with no hidden charges. Call +91 99449 30106 with your date for an instant quote.`,
       },
       {
         question: "Is renting better than buying a wedding suit?",

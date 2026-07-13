@@ -70,6 +70,15 @@ export const SITE = {
     count: 349,
   },
 
+  /**
+   * Owner-approved published prices (July 2026). Custom tailoring is
+   * deliberately quote-based — do not publish custom suit prices.
+   */
+  pricing: {
+    groomBlazerRentalFrom: "₹1,099",
+    guestBlazerRentalFrom: "₹899",
+  },
+
   serviceAreas: [
     "Guindy",
     "Alandur",
