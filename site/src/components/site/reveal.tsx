@@ -40,6 +40,13 @@ export function Reveal({
 
       const mm = gsap.matchMedia();
       mm.add("(prefers-reduced-motion: no-preference)", () => {
+        // If the section is already on screen (deep link to an anchor,
+        // reload mid-page), never hide it — animating only below-the-fold
+        // content avoids any flash of blank page.
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          return;
+        }
+
         const marked = el.querySelectorAll("[data-reveal]");
         const targets = marked.length > 0 ? Array.from(marked) : [el];
 

@@ -22,6 +22,10 @@ export function Hero() {
     () => {
       const mm = gsap.matchMedia();
       mm.add("(prefers-reduced-motion: no-preference)", () => {
+        // Skip the intro when the page loads scrolled past the hero
+        // (anchor deep links) — never animate what nobody sees.
+        if (window.scrollY > window.innerHeight * 0.5) return;
+
         const tl = gsap.timeline({
           defaults: { ease: "power3.out" },
         });
@@ -59,22 +63,22 @@ export function Hero() {
       {/* Photography */}
       <div className="hero-media absolute inset-0" aria-hidden>
         <Image
-          src="/images/hero-groom.jpg"
+          src="/images/hero-wedding.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[68%_22%]"
+          className="object-cover object-[72%_center]"
         />
       </div>
-      {/* Cinematic grading */}
+      {/* Cinematic grading — deep left panel keeps text crisp over the ivory embroidery */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/20"
+        className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/25"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-ink/75 via-ink/25 to-transparent"
+        className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/45 to-ink/5"
       />
 
       <div className="shell relative">
