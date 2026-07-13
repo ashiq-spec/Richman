@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://www.richmansuits.com
+Sitemap: https://www.richmansuits.com/sitemap.xml
