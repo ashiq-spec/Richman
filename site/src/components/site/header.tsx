@@ -18,6 +18,7 @@ const NAV = [
   { href: "/tuxedos/", label: "Tuxedos" },
   { href: "/custom-tailoring/", label: "Custom Tailoring" },
   { href: "/gallery/", label: "Gallery" },
+  { href: "/blog/", label: "Journal" },
   { href: "/contact/", label: "Contact" },
 ] as const;
 
@@ -66,7 +67,7 @@ export function Header() {
         <div className="shell flex h-16 items-center justify-between gap-6 md:h-[72px]">
           <Wordmark />
 
-          <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
+          <nav aria-label="Main" className="hidden items-center gap-6 lg:flex xl:gap-7">
             {NAV.map((item) => (
               <Link
                 key={item.href}
