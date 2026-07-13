@@ -23,11 +23,7 @@ const NAV = [
 
 function Wordmark() {
   return (
-    <Link
-      href="/"
-      aria-label={`${SITE.name} — home`}
-      className="group flex flex-col leading-none"
-    >
+    <Link href="/" className="group flex flex-col leading-none">
       <span className="font-serif text-[19px] tracking-wide text-silk transition-colors group-hover:text-champagne">
         Richman Suits
       </span>

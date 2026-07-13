@@ -128,14 +128,14 @@ export function Footer() {
           <p className="mt-4 text-sm text-mist">
             <a
               href={SITE.phone.href}
-              className="transition-colors hover:text-champagne"
+              className="inline-block py-1 transition-colors hover:text-champagne"
             >
               {SITE.phone.display}
             </a>
             <br />
             <a
               href={SITE.phoneAlt.href}
-              className="transition-colors hover:text-champagne"
+              className="inline-block py-1 transition-colors hover:text-champagne"
             >
               {SITE.phoneAlt.display}
             </a>
@@ -169,7 +169,7 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-xs leading-relaxed text-mist/60">
+          <p className="mt-6 text-xs leading-relaxed text-mist/80">
             Dressing grooms across {SITE.serviceAreas.join(" · ")} — and all of
             Chennai.
           </p>
