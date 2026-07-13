@@ -7,7 +7,7 @@
 export const SITE = {
   name: "Richman Suits Gold",
   shortName: "Richman Suits",
-  url: "https://www.richmansuits.com",
+  url: "https://richmansuits.com",
   tagline: "Luxury Wedding Suits in Chennai",
   description:
     "Richman Suits Gold is Chennai's luxury wedding suit atelier in Guindy — custom-tailored wedding suits, tuxedos, sherwanis, three-piece suits and premium suit rentals for the modern groom. 7,500+ suits delivered. Call 99449 30106.",
